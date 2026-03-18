@@ -53,4 +53,4 @@ Every existing meeting tool is locked to its own ecosystem — 飞书 only works
 
 ---
 
-*Private alpha — Columbia University, 2026*
+*Private alpha.*
