@@ -1,28 +1,43 @@
 # ink-dojo
 
-Building **InkWeave** — a notes-first AI structuring tool for knowledge workers who think in multiple languages.
+Building **InkWeave** — an AI-powered note structuring tool for knowledge workers who think in multiple languages.
 
 ---
 
-### What we're working on
+### What we're building
 
-**InkWeave** is an Obsidian-class editor with Granola-class audio integration — built for scientists, engineers, and knowledge workers in bilingual environments.
+**InkWeave** turns raw input into structured Markdown documents — instantly.
 
 ```
-Your notes + meeting transcript → Claude → structured Markdown document
+handwritten notes / meeting recording / uploaded PDF / typed text
+              ↓  Claude + Whisper
+        structured Markdown document
 ```
 
-Every existing meeting tool is locked to its own ecosystem — 飞书 only records 飞书, 腾讯会议 only records 腾讯会议. Chinese professionals average 3–5 platforms per day. InkWeave captures from all of them.
+Every existing meeting tool is locked to its own ecosystem — 飞书 only works in 飞书, Zoom only in Zoom. Chinese professionals use 3–5 platforms daily. InkWeave works with all of them.
+
+---
+
+### Current status
+
+- ✅ Text / image / audio / PDF input → structured output
+- ✅ Real-time recording + live transcription
+- ✅ Speaker diarization (who said what)
+- ✅ User auth + project management
+- ✅ Desktop app skeleton (Tauri)
+- 🚧 Deployment & first real users
 
 ---
 
 ### Stack
 
-- **Frontend** — Next.js + TypeScript, Vditor editor
-- **Desktop** — Tauri (macOS + Windows, coming in Phase 3)
-- **Backend** — FastAPI (Python)
-- **AI** — Anthropic Claude for structuring, Whisper for ASR
-- **DB** — SQLite
+| Layer | Tech |
+|---|---|
+| Frontend | Next.js + TypeScript, Vditor editor |
+| Desktop | Tauri (macOS + Windows) |
+| Backend | FastAPI (Python) |
+| AI | Claude (structuring) + Whisper (ASR) |
+| DB | SQLite + SQLAlchemy |
 
 ---
 
@@ -30,11 +45,12 @@ Every existing meeting tool is locked to its own ecosystem — 飞书 only recor
 
 | Phase | Status | Goal |
 |---|---|---|
-| 1 — Editor + Text MVP | 🔨 In progress | Prove structuring pipeline |
-| 2 — Audio + Multi-template | Planned | Notes + transcript synthesis |
-| 3 — Desktop App | Planned | Silent system audio capture, cross-platform |
-| 4 — Ecosystem + Mobile | Planned | Export to 飞书 / 钉钉 / GitHub / mobile |
+| 1 — Editor MVP | ✅ Done | Text → structured Markdown |
+| 2 — Audio + Recording | ✅ Done | Live transcription + speaker ID |
+| 3 — Production | 🚧 Now | Deploy, auth, first 5 users |
+| 4 — Desktop App | Planned | Silent audio capture, offline mode |
+| 5 — Ecosystem | Planned | 飞书 / 钉钉 / GitHub export, mobile |
 
 ---
 
-*Private alpha. More soon.*
+*Private alpha — Columbia University, 2026*
